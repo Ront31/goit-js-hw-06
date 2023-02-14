@@ -1,5 +1,7 @@
-const liElLength = document.querySelectorAll(".item").length;
-console.log(`Number of categories: ${liElLength}`);
+const liElLength = document.querySelectorAll(".item");
+console.log(`Number of categories: ${liElLength.length}`);
 
-// const liInnerElLength = document.querySelectorAll("li").length;
-// console.log(liInnerElLength);
+for (let index = 0; index < liElLength.length; index++) {
+  console.log(`Category: ${liElLength[index].children[0].textContent}`);
+  console.log(`Elements: ${liElLength[index].children[1].children.length}`);
+}
